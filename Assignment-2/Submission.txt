@@ -1,0 +1,6 @@
+Hostname:us-cdbr-iron-east-02.cleardb.net
+Username:b65e4aa95763d5
+password:6b685682
+Port: 3306
+*Heroku not working with Trigger so I did everything in local
+*In Case any SQL truncated file is wrong I added an extra SQL file called full.sql as the whole part of this assignment

@@ -29,6 +29,7 @@ public class Student extends Person {
 		this.enrolledSections = enrolledSections;
 	}
 	*/
+	
 	@OneToMany(mappedBy="students")
 	private List<Enrollment> enrolledStudents;
 	public void enrolledStudents(Enrollment en) {
@@ -36,7 +37,7 @@ public class Student extends Person {
 		 if(en.getStudent() != this)
 			en.setStudent(this);
 	}
-	   
+	
 	public List<Enrollment> getEnrolledStudents(){
 		return enrolledStudents;
 	}
@@ -48,23 +49,27 @@ public class Student extends Person {
 	public Student() {
 		super();
 	}
+	
 	public Student(String username, String password, String firstName, String lastName, Integer gradYear, long scholarship) {
 		super(username, password, firstName, lastName);
 		this.gradYear = gradYear;
 		this.scholarship = scholarship;
 	}
+	
 	public Integer getGradYear() {
 		return gradYear;
 	}
+	
 	public void setGradYear(int gradYear) {
 		this.gradYear = gradYear;
 	}
+	
 	public Long getScholarship() {
 		return scholarship;
 	}
+	
 	public void setScholarship(Long scholarship) {
 		this.scholarship = scholarship;
 	}	
-
 
 }
